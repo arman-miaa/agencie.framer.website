@@ -2,6 +2,8 @@ import Banner from "./components/Banner"
 import Choose from "./components/Choose"
 import Navbar from "./components/Navbar"
 import OurMission from "./components/OurMission"
+import Partners from "./components/Partners"
+import ServicesSection from "./components/ServicesSection"
 import Video from "./components/Video"
 
 
@@ -15,7 +17,9 @@ function App() {
         <Banner />
         <Video />
         <OurMission />
-        <Choose/>
+        <Choose />
+        <Partners />
+        <ServicesSection/>
       </div>
    
     </>
