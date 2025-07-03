@@ -5,8 +5,8 @@ import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-18 px-20 flex flex-col items-center lg:items-start text-center lg:text-left ">
-      <h1 className="text-3xl md:text-6xl  font-semibold">
+    <div className="max-w-7xl mx-auto mt-12 px-10 flex flex-col items-center lg:items-start text-center lg:text-left ">
+      <h1 className="text-3xl md:text-[65px]   font-medium leading-16 ">
         Big ideas, smart strategies,
         <span className="hidden lg:inline">
           <br />
@@ -17,7 +17,7 @@ const Banner = () => {
         </span>
         supercharge⚡your brand!
       </h1>
-      <p className="text-xl py-8 ">
+      <p className="text-lg font-medium text-[#0f0f0f96] py-8 ">
         Your go-to agency for designs that inspire and strategies{" "}
         <span className="hidden lg:inline">
           <br />
@@ -29,8 +29,8 @@ const Banner = () => {
         link="https://www.framer.com/marketplace/templates/agenium/?via=realmehedi1"
       />
       {/* review */}
-      <div className="flex items-center gap-2 mt-4">
-        <span className="flex gap-1 text-main">
+      <div className="flex items-center gap-2 mt-6">
+        <span className="flex gap-1 text-[#F15533]">
           {[...Array(4)].map((_, i) => (
             <FaStar key={i} />
           ))}

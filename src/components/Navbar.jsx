@@ -3,18 +3,56 @@ import Button1 from "../shared/Button1";
 
 const Navbar = () => {
 
-    const links = <>
-    <li className="hover:text-main hover:bg-transparent"><a href="#">Services</a></li>
-    <li className="hover:text-main hover:bg-transparent"><a href="#">Project</a></li>
-    <li className="hover:text-main hover:bg-transparent"><a href="#">Process</a></li>
-    <li className="hover:text-main hover:bg-transparent"><a href="#">Reviews</a></li>
-    <li className="hover:text-main hover:bg-transparent"><a href="#">Pricing</a></li>
-  </>
+  const links = (
+    <>
+      <li>
+        <a
+          href="#"
+          className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
+        >
+          Services
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
+        >
+          Project
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
+        >
+          Process
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
+        >
+          Reviews
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
+        >
+          Pricing
+        </a>
+      </li>
+    </>
+  );
+  
   
 
   return (
-    <div>
-      <div className="navbar   px-20 mx-auto">
+    <>
+      <div className="navbar sticky top-0 z-30 left-0 bg-white   px-10 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,12 +84,12 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo-img"
-              className="w-24 object-cover cursor-pointer"
+              className="w-25 object-cover cursor-pointer"
             />
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1  font-medium text-[15px] ">{links}</ul>
         </div>
         <div className="navbar-end">
           <Button1
@@ -60,7 +98,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -25,33 +25,30 @@ const Partners = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      {" "}
-      {/* Increased vertical padding */}
+    <section className="mt-40">
+  
       <div className="container mx-auto px-4 md:px-20 text-center">
         {/* Title */}
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-12">
-          {" "}
-          {/* Increased margin-bottom */}
-          We don't just work <br className="md:hidden" /> together—we{" "}
+        <h2 className="text-3xl md:text-[52px] font-semibold text-gray-900 leading-13 mb-16">
+      
+          We don't just work <br/> together—we
           <span className="text-orange-500">grow</span> together.
         </h2>
 
         {/* Logos Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-          {" "}
-          {/* Adjusted gap and max-width */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-3xl px-8 mx-auto">
+       
           {logos.map((logo) => (
             <div
               key={logo.id}
-              className="flex items-center justify-center p-4 bg-gray-100 rounded-lg h-24 w-full" // Adjusted height and full width
+              className="flex items-center justify-center p-4 bg-gray-100 rounded-lg h-30 w-full" 
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 className="max-w-[70%] max-h-[70%] object-contain"
-              />{" "}
-              {/* Adjusted image size */}
+              />
+            
             </div>
           ))}
         </div>

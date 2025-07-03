@@ -1,16 +1,19 @@
 const SlideCards = ({ text, image }) => {
   return (
     <div className="h-full">
-      <div className="card bg-base-100 shadow-lg h-full flex flex-col">
-        <div className="card-body flex-1 p-6">
-          <p className="text-base leading-relaxed text-gray-700">{text}</p>
+      <div className="bg-[#F5F7F9] shadow-lg h-full flex flex-col justify-between rounded-2xl overflow-hidden min-h-[440px]">
+        {/* Text */}
+        <div className="p-6">
+          <p className="text-xl font-medium">{text}</p>
         </div>
+
+        {/* Image */}
         <figure className="px-6 pb-6">
-          <div className="w-full h-48 bg-gray-100 rounded-lg overflow-hidden">
+          <div className="w-full h-44 rounded-lg overflow-hidden">
             <img
               src={image || "/placeholder.svg"}
               alt="Benefit illustration"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover mix-blend-multiply pb-2"
             />
           </div>
         </figure>
@@ -18,5 +21,4 @@ const SlideCards = ({ text, image }) => {
     </div>
   );
 };
-
 export default SlideCards;

@@ -8,6 +8,7 @@ import slide2 from "../assets/slide2.avif";
 import slide3 from "../assets/slide3.avif";
 import slide4 from "../assets/slide4.avif";
 import slide5 from "../assets/slide5.avif";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 const Slide = () => {
@@ -29,72 +30,48 @@ const Slide = () => {
         image: slide4,
       },
       {
-        text: "We're here to redefine your business possibilities.",
+        text: "Get big agency results without breaking the bank.",
         image: slide5,
       },
       {
-        text: "Advanced analytics to track your growth and success metrics.",
+        text: "Our team comes up with out-of-the-box ideas to make your brand stand out.",
         image: slide1,
       },
       {
-        text: "24/7 customer support to help you whenever you need assistance.",
+        text: "We take care of generating leads while you focus on doing what you love—running your business!",
         image: slide2,
       },
     ];
       
 
   return (
-    <section className="px-4 md:px-16 py-8">
+    <section className="">
       {/* Custom Navigation Buttons */}
       <div className="flex justify-end gap-3 mb-6">
-        <button className="swiper-button-prev-custom btn btn-sm btn-outline btn-circle hover:btn-primary">
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+        <button className="swiper-button-next-custom bg-main p-3 rounded-xl text-white text-2xl cursor-pointer ">
+          <IoIosArrowBack />
         </button>
-        <button className="swiper-button-next-custom btn btn-sm btn-outline btn-circle hover:btn-primary">
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+        <button className="swiper-button-next-custom bg-main p-3 rounded-xl text-white text-2xl cursor-pointer ">
+          <IoIosArrowForward />
         </button>
       </div>
 
       {/* Swiper Slider */}
       <Swiper
-        slidesPerView={3.5} // ✅ Show 3 full + 1 half slide always
-        spaceBetween={30}
+        slidesPerView={3.5}
+        spaceBetween={20}
         loop={true}
         grabCursor={true}
         navigation={{
           nextEl: ".swiper-button-next-custom",
           prevEl: ".swiper-button-prev-custom",
         }}
-        pagination={false} // ❌ No dots
+        pagination={false}
         modules={[Navigation]}
         className="benefits-swiper"
       >
         {benefits.map((benefit, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="h-auto">
             <SlideCards text={benefit.text} image={benefit.image} />
           </SwiperSlide>
         ))}
