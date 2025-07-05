@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import OurMission from "./components/OurMission"
 import Partners from "./components/Partners"
+import PortfolioSection from "./components/PortfolioSection"
 import PricingSection from "./components/PricingSection"
 import ServicesSection from "./components/ServicesSection"
 import Testimonials from "./components/Testimonials"
@@ -26,6 +27,7 @@ function App() {
         <Choose />
         <Partners />
         <ServicesSection />
+        <PortfolioSection/>
         
         <Testimonials/>
         <PricingSection/>
