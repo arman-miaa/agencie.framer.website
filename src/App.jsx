@@ -3,6 +3,7 @@ import Answers from "./components/Answers"
 import Banner from "./components/Banner"
 import Choose from "./components/Choose"
 import Contact from "./components/Contact"
+import Differences from "./components/Differences"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import OurMission from "./components/OurMission"
@@ -29,7 +30,8 @@ function App() {
         <Partners />
         <ServicesSection />
         <PortfolioSection />
-        <Process/>
+        <Process />
+        <Differences/>
         
         <Testimonials/>
         <PricingSection/>
