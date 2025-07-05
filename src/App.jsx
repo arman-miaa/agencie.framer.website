@@ -9,6 +9,7 @@ import OurMission from "./components/OurMission"
 import Partners from "./components/Partners"
 import PortfolioSection from "./components/PortfolioSection"
 import PricingSection from "./components/PricingSection"
+import Process from "./components/Process"
 import ServicesSection from "./components/ServicesSection"
 import Testimonials from "./components/Testimonials"
 import Video from "./components/Video"
@@ -27,7 +28,8 @@ function App() {
         <Choose />
         <Partners />
         <ServicesSection />
-        <PortfolioSection/>
+        <PortfolioSection />
+        <Process/>
         
         <Testimonials/>
         <PricingSection/>
