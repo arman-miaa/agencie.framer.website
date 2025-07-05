@@ -24,11 +24,18 @@ const defaultServices = [
       "SEO Integration",
       "UX/UI Optimization",
     ],
-    detailTitle: "Detailed Web Development",
-    detailDescription:
-      "We use modern tools and best practices to build your site.",
+    detailTitle: "What’s Included:",
+
     detailImage: hideImg1,
-    features: ["Responsive Design", "API Integration", "SEO Optimization"],
+    features: [
+      ": Eye candy for your website! We make sure every button, color, and layout looks gorgeous and matches your vibe.",
+      ": No frustrating clicks here! We map out smooth and intuitive user experiences that guide visitors effortlessly.",
+      ": Need something extra special? We’ll code your dream site from scratch, tailored to your exact needs.",
+      ": Selling stuff online? We’ll create a secure, easy-to-navigate store that makes checkout a breeze. ",
+      " : Want to update your site without calling us every time? We’ll hook you up with WordPress or Webflow for DIY magic.",
+      " : Think of us as your website’s personal trainer—keeping it fit, fast, and fabulous.",
+      " : Your site will look perfect on all screens, from giant monitors to tiny phones.",
+    ],
   },
   {
     title: "Digital Marketing",
