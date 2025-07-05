@@ -62,11 +62,11 @@ const ServiceCard = ({ service }) => {
 
       {/* ✅ Tags with individual icons */}
       {service.tags && service.tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mb-6 px-4">
+        <div className="flex flex-wrap gap-2 mb-14 px-4">
           {service.tags.map((tag, i) => (
             <span
               key={i}
-              className="flex items-center gap-2 px-3 py-1  text-sm rounded-full border border-gray-200"
+              className="flex items-center gap-2 px-3 py-1  text-sm font-medium rounded-full border border-gray-300"
             >
               {iconMap[tag] || <FaCode />}
               {tag}
@@ -84,7 +84,7 @@ const ServiceCard = ({ service }) => {
         }`}
       >
         {isExpanded ? (
-          <span className="flex items-center justify-between w-full gap-2 font-medium">
+          <span className="flex items-center justify-between w-full gap-2  font-medium">
             Hide Details
             <span className="ml-2">
               <FaMinus className="text-white" />
@@ -102,32 +102,36 @@ const ServiceCard = ({ service }) => {
       </button>
 
       {isExpanded && (
-        <div className="mb-6 p-6 bg-gray-200 rounded-lg animate-in slide-in-from-top duration-300">
+        <div className="mb-6 p-6  rounded-lg animate-in slide-in-from-top duration-300">
           <div className="flex flex-col">
             {/* Image Section */}
             <div className="mb-4">
               <img
                 src={service.detailImage || "/placeholder.svg"}
                 alt={service.title}
-                className="w-full h-64 object-cover rounded-lg shadow-md"
+                className="w-full h-[570px]  object-cover rounded-2xl shadow-md"
               />
             </div>
 
             {/* Text Section */}
             <div>
-              <h4 className="text-xl font-semibold mb-3">
+              <h4 className="text-xl font-semibold mt-4">
                 {service.detailTitle || "Detailed Overview"}
               </h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                {service.detailDescription}
-              </p>
 
               {service.features && service.features.length > 0 && (
                 <ul className="space-y-2">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-600">{feature}</span>
+                    <li
+                      key={i}
+                      className="flex items-start gap-2 before:content-['•'] before:text-black before:mr-2 before:text-lg"
+                    >
+                      <span className="text-gray-600">
+                        <span className="font-semibold text-black">
+                          {feature.title}:
+                        </span>{" "}
+                        {feature.description}
+                      </span>
                     </li>
                   ))}
                 </ul>

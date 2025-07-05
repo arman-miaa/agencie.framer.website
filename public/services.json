@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Web Design and Development",
+    "description": "Your website is like your digital handshake—it’s the first thing people notice about you online. Our Web Design & Development services are all about making that handshake firm, friendly, and unforgettable.",
+    "tags": [
+      "UI UX Design",
+      "Custom Website Design",
+      "E-Commerce Development",
+      "Content Management System (CMS)",
+      "Website Maintenance and Support",
+      "SEO Integration",
+      "UX/UI Optimization"
+    ],
+    "detailTitle": "What’s Included:",
+    "detailImage": "../src/assets/hideImg1.avif",
+    "features": [
+      {
+        "title": "UI Design",
+        "description": ": Eye candy for your website! We make sure every button, color, and layout looks gorgeous and matches your vibe."
+      },
+      {
+        "title": "UX Design",
+        "description": ": No frustrating clicks here! We map out smooth and intuitive user experiences that guide visitors effortlessly."
+      },
+      {
+        "title": "Custom Web Development",
+        "description": "Need something extra special? We’ll code your dream site from scratch, tailored to your exact needs."
+      },
+      {
+        "title": "E-commerce Development",
+        "description": ": Selling stuff online? We’ll create a secure, easy-to-navigate store that makes checkout a breeze."
+      },
+      {
+        "title": "CMS Integration",
+        "description": ": Want to update your site without calling us every time? We’ll hook you up with WordPress or Webflow for DIY magic."
+      },
+      {
+        "title": "Website Maintenance",
+        "description": "Think of us as your website’s personal trainer—keeping it fit, fast, and fabulous."
+      },
+      {
+        "title": "Responsive Design",
+        "description": ": Your site will look perfect on all screens, from giant monitors to tiny phones."
+      }
+    ]
+  },
+  {
+    "title": "Digital Marketing",
+    "description": "Let’s face it, the internet is a noisy place. But with our Digital Marketing services, you won’t just stand out—you’ll shine. We’ll help you show up where your customers are hanging out, whether that’s Google, Instagram, or somewhere in between. Think of us as your online hype team, always finding clever ways to boost your visibility and drive those sweet, sweet clicks.",
+    "tags": [
+      "SEO (Search Engine Optimization)",
+      "PPC Advertising",
+      "Social Media Marketing",
+      "Email Marketing",
+      "Content Marketing"
+    ],
+    "detailTitle": "What’s Included:",
+    "detailImage": "../src/assets/hideImg2.avif",
+    "features": [
+      {
+        "title": "SEO (Search Engine Optimization)",
+        "description": ": Climbing to the top of Google rankings, one keyword at a time. Plus, we’ll fix all that techy stuff that helps search engines love you."
+      },
+      {
+        "title": "PPC Advertising",
+        "description": ": Ready to skip the line? Our targeted ad campaigns get you front and center, faster than you can say, “Click me!”"
+      },
+      {
+        "title": "Social Media Marketing",
+        "description": ": Let’s turn likes into leads. From creating scroll-stopping posts to running ads, we’ll make your socials pop."
+      },
+      {
+        "title": "Email Marketing",
+        "description": ": Ding! New email! We design campaigns that people actually want  to open and read."
+      },
+      {
+        "title": "Content Marketing",
+        "description": ": Blogs, videos, and memes—oh my! We’ll create content that entertains, educates, and engages your audience."
+      }
+    ]
+  },
+  {
+    "title": "Branding & Creative Services",
+    "description": "Your brand is so much more than a logo—it’s your story, your personality, and your promise to customers. Our Branding & Creative Services bring your identity to life in a way that’s bold, beautiful, and 100% you. We’ll help you stand out, stick in people’s minds, and make your competitors go, “Whoa, that’s cool.”",
+    "tags": [
+      "Logo Design",
+      "Brand Straegy & Positioning",
+      "Visual Identity Design",
+      "Brand Guidelines",
+      "Social Media Graphics",
+      "Email Design",
+      "Pitch Decks & Presentations",
+      "Packaging Design"
+    ],
+    "detailTitle": "What’s Included:",
+    "detailImage": "../src/assets/hideImg3.avif",
+    "features": [
+      {
+        "title": "Logo Design",
+        "description": ": Your new signature look! A logo that’s not just pretty but says, “Hey, this is "
+      },
+      {
+        "title": "Brand Strategy & Positioning",
+        "description": ": We’ll help you figure out what you stand for and how to shout it from the rooftops (metaphorically, of course)."
+      },
+      {
+        "title": "Brand Guidelines",
+        "description": ": Your branding rulebook, so everything stays consistent whether it’s on a billboard or a coffee cup."
+      }
+    ]
+  },
+  {
+    "title": "App Design & Development",
+    "description": "Got a brilliant app idea? Let’s make it a reality! Whether it’s a mobile game, a productivity tool, or the next big social platform, we’ll build something that’s smooth, sleek, and downright addictive. Our apps are made with love (and a whole lot of coding).",
+    "tags": [
+      "UI/UX for Apps",
+      "Custom App Development",
+      "Mobile Optimization",
+      "App Store Optimization"
+    ],
+    "detailTitle": "What’s Included:",
+    "detailImage": "../src/assets/hideImg4.avif",
+    "features": [
+      {
+        "title": "UI/UX for Apps",
+        "description": ": Because apps need to be both pretty and practical."
+      },
+      {
+        "title": "Custom App Development",
+        "description": ": From brainstorming to launch day, we’ll handle it all."
+      },
+      {
+        "title": "Mobile Optimization",
+        "description": ": Apps that work flawlessly on every device, from the latest iPhone to that trusty old Android."
+      },
+      {
+        "title": "App Store Optimization",
+        "description": ": We’ll make sure your app shines bright in app store searches."
+      }
+    ]
+  }
+]
