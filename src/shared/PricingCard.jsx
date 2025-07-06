@@ -18,11 +18,11 @@ const PricingCard = ({
   const yearlyPrice = "$290";
 
   return (
-    <div className="bg-gray-200 rounded-2xl p-2 shadow-sm border border-gray-200 relative">
+    <div className="bg-[#eff1f6a4] rounded-2xl p-2 shadow-sm  relative ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Left Side - Pricing Info */}
         <div className="bg-white h-fit p-4 rounded-2xl lg:sticky top-20">
-          <div className="bg-gray-200 w-fit rounded-full pr-3 flex items-center gap-1 mb-6">
+          <div className="bg-[#eff1f6a4] w-fit rounded-full pr-3 flex items-center gap-1 mb-6">
             <div className="bg-black p-[10px] rounded-full text-white">
               <FaRegStar className="text-sm" />
             </div>
@@ -107,7 +107,7 @@ const PricingCard = ({
         <div className="space-y-3 bg-white rounded-2xl p-4">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start gap-3">
-              <IoMdCheckmark className="mt-1 flex-shrink-0 text-green-600" />
+              <IoMdCheckmark className="mt-1 flex-shrink-0 " />
               <span className="text-black text-sm leading-relaxed">
                 {feature}
               </span>

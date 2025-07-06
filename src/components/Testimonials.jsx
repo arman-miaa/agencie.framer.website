@@ -79,7 +79,10 @@ const Testimonials = () => {
 
 
   return (
-    <div className="max-w-7xl mx-auto mt-52 p-6 bg-white">
+    <div
+      id="reviews"
+      className=" scroll-mt-36 max-w-7xl mx-auto mt-46 p-6 bg-white"
+    >
       {/* Header Section */}
       <div className="text-center mb-12">
         <div className="flex items-center justify-center gap-2 mb-6">
@@ -127,7 +130,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="flex flex-col items-start">
             {/* Quote Box */}
-            <div className="bg-gray-100 rounded-xl p-6 pb-10 h-full w-full relative">
+            <div className="bg-[#eff1f6a4] rounded-3xl p-6 pb-10 h-full w-full relative">
               {/* Big Quote Mark on Left */}
               <div className="absolute top-4 left-4 text-6xl md:text-7xl text-orange-500 leading-none font-sans">
                 "
@@ -153,7 +156,7 @@ const Testimonials = () => {
                       <img
                         src={testimonial.logo}
                         alt="logo"
-                        className="w-14 h-14 object-fitt bg-gray-200 px-2 py-5 rounded-full"
+                        className="w-14 h-14 object-fitt bg-[#eff1f6a4] px-2 py-5 rounded-full"
                       />
                     </span>
                   )}
@@ -174,7 +177,7 @@ const Testimonials = () => {
       {/* Video Testimonials */}
       <div className="grid grid-cols- md:grid-cols-2 gap-3">
         {/* box1 */}
-        <div className="bg-gray-200 flex flex-col items-center justify-center p-3 rounded-3xl">
+        <div className="bg-[#eff1f6bc] flex flex-col items-center justify-center p-3 rounded-3xl">
           <div className="w-full aspect-video">
             <iframe
               className="w-full h-full rounded-3xl"
@@ -195,7 +198,7 @@ const Testimonials = () => {
           </div>
         </div>
         {/* box 2 */}
-        <div className="bg-gray-200 flex flex-col items-center justify-center p-3 rounded-3xl">
+        <div className="bg-[#eff1f6bf] flex flex-col items-center justify-center p-3 rounded-3xl">
           <div className="w-full aspect-video">
             <iframe
               className="w-full h-full rounded-3xl"

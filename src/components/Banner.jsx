@@ -17,7 +17,7 @@ const Banner = () => {
         </span>
         supercharge⚡your brand!
       </h1>
-      <p className="text-lg font-medium text-[#0f0f0f96] py-8 ">
+      <p className="text-xl font-medium text-[#0f0f0f96] py-6 pt-7 ">
         Your go-to agency for designs that inspire and strategies{" "}
         <span className="hidden lg:inline">
           <br />

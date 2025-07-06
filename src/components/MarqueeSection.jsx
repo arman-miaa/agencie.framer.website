@@ -14,7 +14,7 @@ const marqueeItems = [
 
 const MarqueeSection = () => {
   return (
-    <section className="mt-20 py-6 overflow-hidden">
+    <section className="mt-24 py-6 overflow-hidden">
       <div className="relative w-full">
         {/* Left & right gradient overlays for fade effect */}
         <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white via-white to-transparent z-10 pointer-events-none" />

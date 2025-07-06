@@ -16,7 +16,7 @@ const Section = () => {
     const handleScroll = () => {
       if (videoRef.current) {
         const rect = videoRef.current.getBoundingClientRect();
-        if (rect.top <= 80 && rect.bottom > 100) {
+        if (rect.top <= 100 && rect.bottom > 100) {
           setIsVideoPinned(true);
         } else {
           setIsVideoPinned(false);
@@ -37,7 +37,7 @@ const Section = () => {
   };
 
   return (
-    <section className="relative mx-auto px-10 py-14 flex flex-col lg:flex-row gap-4 transition-all duration-500">
+    <section className="relative max-w-[1820px] mx-auto pt-16 flex flex-col lg:flex-row gap-4 transition-all duration-500">
       {/* Left Box */}
       <div
         className={`relative rounded-3xl overflow-hidden flex-1 transition-all duration-700 ${
@@ -62,7 +62,7 @@ const Section = () => {
       {/* Middle Video */}
       <div
         ref={videoRef}
-        className={`relative rounded-4xl overflow-hidden transition-all duration-700 ${
+        className={`relative rounded-4xl overflow-hidden h-[75vh] transition-all duration-700 ${
           isVideoPinned ? "w-full h-[85vh]" : "lg:w-1/3"
         }`}
         onClick={() => setShowModal(true)}

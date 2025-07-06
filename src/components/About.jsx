@@ -46,7 +46,7 @@ const About = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-white">
+    <div className="max-w-7xl mx-auto  mt-58 bg-white">
       {/* Header Section */}
       <div className="mb-12">
         <div className="bg-gray-200 w-fit  pr-3 rounded-2xl flex items-center gap-2 mb-6">
@@ -82,13 +82,13 @@ const About = () => {
       </div>
 
       {/* Team Section */}
-      <div className=" grid grid-cols-1 lg:grid-cols-4 gap-4 mt-20">
+      <div className=" grid grid-cols-1 lg:grid-cols-4 gap-4 mt-16">
         {/* Team Members */}
         {teamMembers.map((member, index) => (
           <div key={index} className="relative bg-gray-100 rounded-2xl shadow">
             <div className="rounded-lg overflow-hidden">
               {/* Badge */}
-              <span className="absolute top-0 left-0 z-10 bg-orange-600 text-white px-4 py-2 flex items-center gap-2 rounded-l-3xl rounded-tr-4xl text-xs font-semibold">
+              <span className="absolute top-0 left-0 z-10 bg-orange-600 text-white px-4 py-3 flex items-center gap-2 rounded-l-3xl rounded-tr-3xl text-xs font-semibold">
                 <member.badgeIcon className="w-4 h-4" />
                 {member.badge}
               </span>

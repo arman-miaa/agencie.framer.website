@@ -47,7 +47,7 @@ const Slide = () => {
   return (
     <section className="">
       {/* Custom Navigation Buttons */}
-      <div className="flex justify-end gap-3 mb-6">
+      <div className="flex justify-end gap-3 mb-6 mt-2">
         <button className="swiper-button-next-custom bg-main p-3 rounded-xl text-white text-2xl cursor-pointer ">
           <IoIosArrowBack />
         </button>

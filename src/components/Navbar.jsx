@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <li>
         <a
-          href="#"
+          href="#services"
           className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
         >
           Services
@@ -15,7 +15,7 @@ const Navbar = () => {
       </li>
       <li>
         <a
-          href="#"
+          href="#project"
           className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
         >
           Project
@@ -23,7 +23,7 @@ const Navbar = () => {
       </li>
       <li>
         <a
-          href="#"
+          href="#process"
           className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
         >
           Process
@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
         <a
-          href="#"
+          href="#reviews"
           className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
         >
           Reviews
@@ -39,7 +39,7 @@ const Navbar = () => {
       </li>
       <li>
         <a
-          href="#"
+          href="#pricing"
           className="bg-transparent hover:bg-transparent active:bg-transparent hover:text-main"
         >
           Pricing
@@ -74,7 +74,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content font-medium bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>

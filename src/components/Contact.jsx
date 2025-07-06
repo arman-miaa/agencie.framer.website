@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="relative bg-gray-200 p-2 rounded-2xl mx-auto my-32 px-4 ">
+    <div className="relative bg-[#eff1f6a4] p-2 rounded-2xl mx-auto mt-52 px-4 ">
       {/* Orange Section */}
       <section className=" bg-orange-500  pb-30 md:pb-80 pt-10 flex justify-center rounded-3xl md:w-5/8">
         <div className="flex flex-col lg:flex-row   gap-12">

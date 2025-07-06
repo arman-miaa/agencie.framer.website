@@ -1,10 +1,10 @@
 const SlideCards = ({ text, image }) => {
   return (
     <div className="h-full">
-      <div className="bg-[#F5F7F9] shadow-lg h-full flex flex-col justify-between rounded-2xl overflow-hidden min-h-[440px]">
+      <div className="bg-[#F5F7F9] shadow-lg h-full flex flex-col justify-between rounded-4xl overflow-hidden min-h-[470px]">
         {/* Text */}
-        <div className="p-6">
-          <p className="text-xl font-medium">{text}</p>
+        <div className="p-10">
+          <p className="text-xl md:text-2xl font-medium">{text}</p>
         </div>
 
         {/* Image */}
@@ -13,7 +13,7 @@ const SlideCards = ({ text, image }) => {
             <img
               src={image || "/placeholder.svg"}
               alt="Benefit illustration"
-              className="w-full h-full object-cover mix-blend-multiply pb-2"
+              className="w-full h-full object-cover mix-blend-multiply pb-4"
             />
           </div>
         </figure>

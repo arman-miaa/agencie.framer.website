@@ -4,7 +4,7 @@ import Slide from "./Slide";
 
 const Choose = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 mt-22">
+    <div className="max-w-7xl mx-auto px-4 md:px-8 pb-12 mt-[150px]">
       <div className="">
         {/* benefits btn */}
         <div className="bg-gray-100 flex items-center w-fit pr-4 gap-2 rounded-full ">
@@ -13,7 +13,7 @@ const Choose = () => {
           </div>
           <h4 className="text-sm font-medium">Benefits</h4>
         </div>
-        <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+        <h3 className="text-3xl md:text-[50px] font-semibold leading-14 mt-[4px]">
           See why partnering with <br className="hidden md:block" />
           us is the smartest move.
         </h3>

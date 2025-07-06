@@ -76,7 +76,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div
       className={`
-        bg-gray-100 rounded-xl shadow-md transition-all duration-300 ease-in-out
+        bg-[#eff1f6a4] rounded-3xl shadow-md transition-all duration-300 ease-in-out
         ${isOpen ? "relative z-10" : "z-0"}
       `}
     >
@@ -87,7 +87,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         `}
         onClick={onClick}
       >
-        <span className="break-words">{question}</span>
+        <span className="break-words text-lg">{question}</span>
         <span
           className={`
             p-2 rounded-xl transition-colors duration-300
@@ -132,18 +132,16 @@ const Answers = () => {
   };
 
   return (
-    <section className="py-16 ">
-      <div className="container mx-auto px-4 md:px-10 flex flex-col lg:flex-row gap-12">
+    <section className=" max-w-7xl mx-auto mt-52 ">
+      <div className="  flex flex-col lg:flex-row gap-12">
         {/* Left Side */}
         {/* Left Side */}
         <div className="lg:w-1/2 w-full lg:sticky lg:top-28 self-start">
-          <div className="bg-gray-100 w-fit pr-2 rounded-2xl flex items-center gap-2 mb-4">
-             <div className="bg-black p-[10px] rounded-full text-white">
-                                 <FaRegStar className="text-sm" />
-                               </div>
-            <h4 className="text-sm font-medium">
-              Frequently Asked Questions
-            </h4>
+          <div className="bg-[#eff1f6aa] w-fit pr-2 rounded-2xl flex items-center gap-2 mb-4">
+            <div className="bg-black p-[10px] rounded-full text-white">
+              <FaRegStar className="text-sm" />
+            </div>
+            <h4 className="text-sm font-medium">Frequently Asked Questions</h4>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             FAQ It Up! Your curiosity meets our expertise—

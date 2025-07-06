@@ -25,30 +25,26 @@ const Partners = () => {
   ];
 
   return (
-    <section className="mt-40">
-  
+    <section className="mt-[150px]">
       <div className="container mx-auto px-4 md:px-20 text-center">
         {/* Title */}
-        <h2 className="text-3xl md:text-[52px] font-semibold text-gray-900 leading-13 mb-16">
-      
-          We don't just work <br/> together—we
-          <span className="text-orange-500">grow</span> together.
+        <h2 className="text-3xl md:text-[54px] font-semibold text-gray-900 leading-13 mb-15">
+          We don't just work <br /> together—we
+          <span className="text-orange-500"> grow</span> together.
         </h2>
 
         {/* Logos Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-3xl px-8 mx-auto">
-       
           {logos.map((logo) => (
             <div
               key={logo.id}
-              className="flex items-center justify-center p-4 bg-gray-100 rounded-lg h-30 w-full" 
+              className="flex items-center justify-center p-4 bg-[#eff1f6a4] rounded-2xl h-28 w-full"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
                 className="max-w-[70%] max-h-[70%] object-contain"
               />
-            
             </div>
           ))}
         </div>

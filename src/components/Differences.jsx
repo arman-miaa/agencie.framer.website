@@ -56,13 +56,13 @@ const Differences = () => {
         title="While others copy and paste, we innovate and elevate. Your brand gets the VIP treatment it truly deserves."
       />
 
-      <div className="grid md:grid-cols-2 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 max-w-3xl mx-auto">
         {/* Others Column */}
         <div className="">
-          <h3 className="text-2xl font-bold text-gray-700 text-center mb-8">
+          <h3 className="text-2xl font-bold text-gray-700 text-center mb-4">
             Others
           </h3>
-          <div className="bg-gray-200 rounded-l-2xl">
+          <div className="bg-[#eff1f6bc] rounded-l-3xl">
             {othersItems.map((item, index) => (
               <div
                 key={index}
@@ -79,14 +79,14 @@ const Differences = () => {
 
         {/* Agent-G Column */}
         <div className="">
-          <h3 className="text-2xl font-bold text-center mb-8">
+          <h3 className="text-2xl font-bold text-center mb-4">
             <span className="text-orange-500">🤖</span> Agent-G
           </h3>
-          <div className="bg-gray-900 rounded-r-2xl ">
+          <div className="bg-gray-900 rounded-r-3xl ">
             {agentGItems.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
+                className="flex items-center gap-4 p-3 rounded-lg  transition-colors duration-200"
               >
                 <div className="w-8 h-8 flex items-center justify-center">
                   <item.icon className="w-5 h-5 text-orange-500" />
@@ -97,8 +97,6 @@ const Differences = () => {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 };

@@ -84,13 +84,13 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="mt-52 max-w-7xl mx-auto px-4">
+    <div id="pricing" className="mt-52 scroll-mt-36 max-w-7xl mx-auto  ">
       <TitleSection
         badgeText="Pricing Plans"
         title="Affordable, transparent pricing tailored to your business—because every detail matters!"
       />
 
-      <div className="grid gap-8 max-w-4xl mx-auto">
+      <div className="grid gap-8 max-w-7xl mx-auto mt-18">
         {pricingPlans.map((plan, index) => (
           <PricingCard
             key={index}

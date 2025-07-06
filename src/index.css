@@ -1,6 +1,20 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.scroll-offset {
+  scroll-margin-top: 112px; 
+}
+
+
+
 @theme {
     --color-main: #F15533;
     --color-dark: #0F0F0F;

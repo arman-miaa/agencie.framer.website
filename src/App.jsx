@@ -14,6 +14,7 @@ import Process from "./components/Process"
 import ServicesSection from "./components/ServicesSection"
 import Testimonials from "./components/Testimonials"
 import Video from "./components/Video"
+import StickyAd from "./shared/StickyPromo";
 
 
 function App() {
@@ -38,8 +39,9 @@ function App() {
         <About/>
         <Answers/>
         <Contact/>
-        <Footer/>
+        <Footer />
       </div>
+        {/* <StickyAd/> */}
    
     </>
   )

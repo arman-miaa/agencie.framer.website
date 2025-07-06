@@ -56,7 +56,10 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <div className="mt-20 max-w-7xl mx-auto px-4">
+    <div
+      id="project"
+      className="scroll-mt-36 mt-[110px] max-w-7xl mx-auto px-4"
+    >
       <TitleSection
         badgeText="Our Portfolio"
         title="Explore the projects where we played, experimented, and built something amazing."
@@ -66,7 +69,7 @@ const PortfolioSection = () => {
         {portfolioData.map((project, index) => (
           <div
             key={index}
-            className="space-y-0 relative rounded-2xl overflow-hidden"
+            className="space-y-0 relative rounded-3xl overflow-hidden"
           >
             {/* Main Image */}
             <div className="aspect-[4/3] overflow-hidden  ">
@@ -76,7 +79,7 @@ const PortfolioSection = () => {
                 className="w-full h-full object-cover"
               />
               {/* Top Box Image */}
-              <div className="bg-gray-200 ml-2 z-50 top-122 p-1 px-6 rounded-lg absolute">
+              <div className="bg-[#eff1f6f1] ml-4 z-50 top-122 p-1 px-6 rounded-lg absolute">
                 <img
                   src={project.topBoxImage}
                   alt="Top Box Decoration"
@@ -86,7 +89,7 @@ const PortfolioSection = () => {
             </div>
 
             {/* Bottom Content Box */}
-            <div className="bg-[#F5F7F9] mt-1 p-6 space-y-4">
+            <div className="bg-[#eff1f6a4] mt-2 p-6 space-y-4">
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, tagIndex) => (
                   <span
@@ -98,7 +101,7 @@ const PortfolioSection = () => {
                 ))}
               </div>
 
-              <h3 className="text-xl font-bold  leading-tight">
+              <h3 className="text-xl font-semibold  leading-tight">
                 {project.title}
               </h3>
 
