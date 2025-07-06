@@ -1,4 +1,4 @@
-"use client";
+
 
 import { useState } from "react";
 import {
@@ -93,7 +93,7 @@ const ServiceCard = ({ service }) => {
         ) : (
           <span className="flex items-center justify-between w-full gap-2 font-medium">
             View Details
-            {/* Button hover করলে + icon এর bg change হবে */}
+            {/* Button hover  */}
             <span className="ml-2 p-4 rounded-2xl transition duration-300 group-hover:bg-orange-500 group-hover:text-white">
               <FaPlus className="text-sm" />
             </span>

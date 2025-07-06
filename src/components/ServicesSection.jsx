@@ -3,7 +3,7 @@ import { RiArrowRightSFill } from "react-icons/ri";
 import { useState, useEffect, useRef } from "react";
 import { FaRegStar } from "react-icons/fa";
 import ServiceCard from "../shared/ServiceCard";
-import serviceData from "../../public/services.json";
+import serviceData from "../data/services.json";
 import MarqueeSection from "./MarqueeSection";
 
 //  4 Services Sample Data
