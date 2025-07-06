@@ -1,36 +1,46 @@
+import { BsTwitterX } from "react-icons/bs";
+import img1 from "../assets/aboutImg1.avif"
+import img2 from "../assets/aboutImg2.avif"
+import img3 from "../assets/aboutImg3.avif"
+import { Wand2, Brain, Cpu } from "lucide-react";
+import { BiLogoLinkedinSquare } from "react-icons/bi";
+import { FaRegStar } from "react-icons/fa";
+
+
+
 const About = () => {
   const teamMembers = [
     {
       name: "Zephyr Callahan",
-      role: "Creative Director",
+      role: "Lead Designer / Brand Strategist",
       badge: "CREATIVE WIZARD",
-      badgeColor: "bg-orange-500",
-      image: "/placeholder.svg?height=300&width=250",
+      badgeIcon: Wand2,
+      image: img1,
       social: {
-        linkedin: "#",
-        twitter: "#",
+        linkedin: "https://www.linkedin.com",
+        twitter: "https://twitter.com",
       },
     },
     {
       name: "Thane Vesper",
-      role: "Web Development Manager",
+      role: "Business Development Manager",
       badge: "STRATEGY GENIUS",
-      badgeColor: "bg-orange-500",
-      image: "/placeholder.svg?height=300&width=250",
+      badgeIcon: Brain,
+      image: img2,
       social: {
-        linkedin: "#",
-        twitter: "#",
+        linkedin: "https://www.linkedin.com",
+        twitter: "https://twitter.com",
       },
     },
     {
       name: "Leander Frost",
-      role: "Lead Designer",
+      role: "Lead Developer",
       badge: "TECH ALCHEMIST",
-      badgeColor: "bg-orange-500",
-      image: "/placeholder.svg?height=300&width=250",
+      badgeIcon: Cpu,
+      image: img3,
       social: {
-        linkedin: "#",
-        twitter: "#",
+        linkedin: "https://www.linkedin.com",
+        twitter: "https://twitter.com",
       },
     },
   ];
@@ -39,22 +49,23 @@ const About = () => {
     <div className="max-w-7xl mx-auto p-6 bg-white">
       {/* Header Section */}
       <div className="mb-12">
-        <div className="flex items-center gap-2 mb-6">
-          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">A</span>
+        <div className="bg-gray-200 w-fit  pr-3 rounded-2xl flex items-center gap-2 mb-6">
+          <div className="bg-black p-[10px] rounded-full text-white">
+            <FaRegStar className="text-sm" />
           </div>
-          <span className="text-sm text-gray-600 font-medium">About us</span>
+          <h4 className="text-sm font-medium">About Us</h4>
         </div>
 
-        <div className="max-w-3xl">
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+        <div className="max-w-3xl ">
+          <p className="text-gray-700 text-lg md:text-2xl leading-8 mb-6">
             We started as a small group of passionate creators who believed that
             great ideas deserve bold execution. What began over coffee-fueled
             brainstorming sessions has grown into a thriving digital agency
-            dedicated to helping brands stand out.
+            dedicated to{" "}
+            <span className="font-semibold">helping brands stand out.</span>
           </p>
 
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-gray-700 text-lg md:text-2xl leading-8">
             Our mission is simple:{" "}
             <span className="font-semibold">
               to craft creative, impactful solutions that drive results.
@@ -71,46 +82,49 @@ const About = () => {
       </div>
 
       {/* Team Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div className=" grid grid-cols-1 lg:grid-cols-4 gap-4 mt-20">
         {/* Team Members */}
         {teamMembers.map((member, index) => (
-          <div key={index} className="relative">
-            <div className="bg-gray-100 rounded-lg overflow-hidden">
+          <div key={index} className="relative bg-gray-100 rounded-2xl shadow">
+            <div className="rounded-lg overflow-hidden">
               {/* Badge */}
-              <div
-                className={`${member.badgeColor} text-white text-xs font-bold px-3 py-1 inline-block m-4 rounded`}
-              >
+              <span className="absolute top-0 left-0 z-10 bg-orange-600 text-white px-4 py-2 flex items-center gap-2 rounded-l-3xl rounded-tr-4xl text-xs font-semibold">
+                <member.badgeIcon className="w-4 h-4" />
                 {member.badge}
-              </div>
+              </span>
 
               {/* Image */}
-              <div className="px-4 pb-4">
+              <div className="px-4 pb-4 pt-4">
                 <img
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  className="w-full h-64 object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-300"
+                  className="w-full h-80 object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
             </div>
 
             {/* Member Info */}
-            <div className="mt-4">
-              <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+            <div className="mt-4 px-4 pb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+                {member.name}
+              </h3>
               <p className="text-gray-600 text-sm mb-3">{member.role}</p>
 
               {/* Social Icons */}
-              <div className="flex gap-2">
+              <div className="flex text-3xl items-center gap-2">
                 <a
                   href={member.social.linkedin}
-                  className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
+                  target="_blank"
+                  className="w-8 h-8 text-4xl"
                 >
-                  <span className="text-white text-xs">in</span>
+                  <BiLogoLinkedinSquare />
                 </a>
                 <a
                   href={member.social.twitter}
-                  className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-800 transition-colors"
+                  target="_blank"
+                  className="w-8 h-8 mt-1 bg-gray-200 "
                 >
-                  <span className="text-white text-xs">X</span>
+                  <BsTwitterX />
                 </a>
               </div>
             </div>
@@ -118,17 +132,17 @@ const About = () => {
         ))}
 
         {/* Join Our Team Card */}
-        <div className="bg-orange-500 rounded-lg p-6 text-white flex flex-col justify-between min-h-[400px]">
+        <div className="bg-orange-600  shadow rounded-2xl p-6 text-white flex flex-col justify-between min-h-[400px]">
           <div>
             <h3 className="text-2xl font-bold mb-4">You can be here</h3>
-            <p className="text-orange-100 leading-relaxed">
+            <p className=" leading-relaxed">
               We value curiosity, creativity, and a can-do attitude. Oh, and
               coffee— lots of coffee. Come join our team that celebrates your
               unique skills and helps you unlock your full potential.
             </p>
           </div>
 
-          <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors mt-6">
+          <button className="bg-black cursor-pointer rounded-full text-white px-6 py-3  font-semibold hover:bg-gray-800 transition-colors mt-6">
             Join Our Team
           </button>
         </div>
