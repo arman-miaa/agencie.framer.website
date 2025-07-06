@@ -1,98 +1,107 @@
+import { FaRegStar } from "react-icons/fa"
+import client1 from "../assets/client1.avif"
+import client2 from "../assets/client2.avif"
+import client3 from "../assets/client3.avif"
+import client4 from "../assets/client4.avif"
+import client5 from "../assets/client5.avif"
+import clientImg1 from "../assets/clientImg1.png"
+import clientImg2 from "../assets/clientImg2.avif"
+import clientImg3 from "../assets/clientImg3.avif"
+import clientImg4 from "../assets/clientImg4.avif"
+import clientImg5 from "../assets/clientImg5.avif"
+import clientImg6 from "../assets/clientImg6.avif"
+
+import logo1 from "../assets/logo2.svg";
+import logo2 from "../assets/logo1.svg";
+import logo4 from "../assets/logo7.svg";
+import logo6 from "../assets/logoImg.svg"
+
+
 const Testimonials = () => {
   const testimonials = [
     {
       quote:
         "Working with this team has been a game-changer. They took our scattered ideas and turned them into a cohesive brand that truly represents who we are.",
-      name: "Liam",
-      title: "Founder, Creative",
-      company: "Founder, International, Recruitment",
-      image: "/placeholder.svg?height=60&width=60",
+      name: "Tobias Green",
+
+      company: "Founder, GreenSpark Innovations",
+      image: clientImg1,
+      logo: logo1,
     },
     {
       quote:
         "Finally, an agency that speaks our language! They understood our vision better than we did and brought it to life in ways we never imagined.",
       name: "Haris",
-      title: "Sales Engineer",
-      company: "Senior Sales Executive, Sales Industry Inc",
-      image: "/placeholder.svg?height=60&width=60",
+      title: "Silas Leighton",
+      company: "Managing Director, VentureVista",
+      image: clientImg2,
+      logo: logo2,
     },
     {
       quote:
         "Looking to catch big breaks, and they absolutely blew me away. From strategy to execution, every detail was spot-on and exceeded our expectations.",
-      name: "Oman Vance",
-      title: "Marketing Director",
-      company: "",
-      image: "/placeholder.svg?height=60&width=60",
+      name: "Orion Vance",
+
+      company: "CEO, Lunar Lux Co.",
+      image: clientImg3,
     },
     {
       quote:
         "Our online presence went from zero to hero in no time. The team made the complex simple and delivered results that speak for themselves.",
-      name: "Calvin Yates",
-      title: "Co-Founder and Product Owner",
-      company: "",
-      image: "/placeholder.svg?height=60&width=60",
+      name: "Callum Yates",
+
+      company: "Co-Founder, Driftwood Media",
+      image: clientImg4,
+      logo: logo4,
     },
     {
       quote:
         "Our online presence went from zero to hero in no time. The team made the complex simple and delivered results that speak for themselves.",
-      name: "Jasmin Lissett",
-      title: "Co-Founder and Administrator",
-      company: "",
-      image: "/placeholder.svg?height=60&width=60",
+      name: "Jasper Lowell",
+
+      company: "CEO, CopperLeaf Enterprises",
+      image: clientImg5,
     },
     {
       quote:
         "They thank us that few their most important clients. The attention to detail, creativity, and professionalism they bring to every project is truly remarkable.",
-      name: "Jasmin Lissett",
-      title: "Senior Associate and Lead Business Analyst",
-      company: "",
-      image: "/placeholder.svg?height=60&width=60",
+      name: "Jasper Lowell",
+
+      company: "Brand Manager, Stellar Bloom Studio",
+      image: clientImg6,
+      logo: logo6,
     },
   ];
 
-  const videoTestimonials = [
-    {
-      name: "Magnus Hawthorne",
-      title: "Senior Specialist",
-      thumbnail: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      name: "Thaddeus Montgomery",
-      title: "Senior Specialist",
-      thumbnail: "/placeholder.svg?height=200&width=300",
-    },
-  ];
 
-  const clientAvatars = [
-    "/placeholder.svg?height=40&width=40",
-    "/placeholder.svg?height=40&width=40",
-    "/placeholder.svg?height=40&width=40",
-    "/placeholder.svg?height=40&width=40",
-    "/placeholder.svg?height=40&width=40",
-  ];
+
+  const clientAvatars = [client1, client2, client3, client4, client5];
+
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-white">
+    <div className="max-w-7xl mx-auto mt-52 p-6 bg-white">
       {/* Header Section */}
       <div className="text-center mb-12">
         <div className="flex items-center justify-center gap-2 mb-6">
-          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">💬</span>
+          <div className="bg-gray-200 flex items-center w-fit mx-auto pr-4 gap-2 rounded-full ">
+            <div className="bg-black p-[10px] rounded-full text-white">
+              <FaRegStar className="text-sm" />
+            </div>
+            <h4 className="text-sm font-medium">Client Stories</h4>
           </div>
-          <span className="text-sm text-gray-600 font-medium">
-            Client Stories
-          </span>
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-6">
-          <h2 className="text-4xl font-bold text-gray-900">Hear stories</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Hear stories
+          </h2>
 
           {/* Client Avatars */}
-          <div className="flex -space-x-2">
+          <div className="flex -space-x-4">
             {clientAvatars.map((avatar, index) => (
               <div
                 key={index}
-                className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
+                className="w-15 h-15 rounded-2xl border-l-6 border-white overflow-hidden"
               >
                 <img
                   src={avatar || "/placeholder.svg"}
@@ -103,12 +112,12 @@ const Testimonials = () => {
             ))}
           </div>
 
-          <span className="text-4xl font-bold text-gray-900">
+          <span className="text-4xl md:text-5xl font-bold text-gray-900">
             straight from
           </span>
         </div>
 
-        <h2 className="text-4xl font-bold text-gray-900">
+        <h2 className="text-4xl md:text-5xl font-bold -mt-4 text-gray-900">
           the people we helped!
         </h2>
       </div>
@@ -116,69 +125,96 @@ const Testimonials = () => {
       {/* Testimonials Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-gray-50 rounded-lg p-6 relative">
-            {/* Quote Icon */}
-            <div className="text-orange-500 text-2xl font-bold mb-4">"</div>
-
-            {/* Quote Text */}
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">
-              {testimonial.quote}
-            </p>
-
-            {/* Client Info */}
-            <div className="flex items-center gap-3">
-              <img
-                src={testimonial.image || "/placeholder.svg"}
-                alt={testimonial.name}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <h4 className="font-semibold text-gray-900">
-                  {testimonial.name}
-                </h4>
-                <p className="text-xs text-gray-600">{testimonial.title}</p>
-                {testimonial.company && (
-                  <p className="text-xs text-gray-500">{testimonial.company}</p>
-                )}
+          <div key={index} className="flex flex-col items-start">
+            {/* Quote Box */}
+            <div className="bg-gray-100 rounded-xl p-6 pb-10 h-full w-full relative">
+              {/* Big Quote Mark on Left */}
+              <div className="absolute top-4 left-4 text-6xl md:text-7xl text-orange-500 leading-none font-sans">
+                "
               </div>
+
+              {/* Quote Text */}
+              <p className=" font-medium leading-relaxed pl-12">
+                "{testimonial.quote}"
+              </p>
+            </div>
+
+            {/* Client Info Below */}
+            <div className="flex flex-col mt-6 w-full mb-4">
+              <div className="flex items-center gap-2">
+                <img
+                  src={testimonial.image || "/placeholder.svg"}
+                  alt={testimonial.name}
+                  className="w-14 h-14 rounded-full object-cover mb-2"
+                />
+                <div>
+                  {testimonial.logo && (
+                    <span>
+                      <img
+                        src={testimonial.logo}
+                        alt="logo"
+                        className="w-14 h-14 object-fitt bg-gray-200 px-2 py-5 rounded-full"
+                      />
+                    </span>
+                  )}
+                </div>
+              </div>
+              <h4 className="font-semibold text-lg text-gray-900">
+                {testimonial.name}
+              </h4>
+
+              <p className="text-sm text-gray-600 capitalize ">
+                {testimonial.company}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       {/* Video Testimonials */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {videoTestimonials.map((video, index) => (
-          <div
-            key={index}
-            className="relative rounded-lg overflow-hidden bg-gray-900"
-          >
-            <img
-              src={video.thumbnail || "/placeholder.svg"}
-              alt={video.name}
-              className="w-full h-48 object-cover opacity-70"
-            />
-
-            {/* Play Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-300 group">
-                <svg
-                  className="w-6 h-6 text-gray-900 ml-1 group-hover:scale-110 transition-transform"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Video Info */}
-            <div className="absolute bottom-4 left-4 text-white">
-              <h4 className="font-semibold">{video.name}</h4>
-              <p className="text-sm opacity-90">{video.title}</p>
-            </div>
+      <div className="grid grid-cols- md:grid-cols-2 gap-3">
+        {/* box1 */}
+        <div className="bg-gray-200 flex flex-col items-center justify-center p-3 rounded-3xl">
+          <div className="w-full aspect-video">
+            <iframe
+              className="w-full h-full rounded-3xl"
+              src="https://www.youtube.com/embed/Ly1auHs_ofo?si=cVW61SjcTvXAGAn4"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </div>
-        ))}
+
+          <div>
+            <h3 className="font-medium text-lg mt-2">Magnus Hawthorne</h3>
+            <p className="capitalize text-center text-gray-700 text-sm pb-2">
+              Owner, Bayleaf
+            </p>
+          </div>
+        </div>
+        {/* box 2 */}
+        <div className="bg-gray-200 flex flex-col items-center justify-center p-3 rounded-3xl">
+          <div className="w-full aspect-video">
+            <iframe
+              className="w-full h-full rounded-3xl"
+              src="https://www.youtube.com/embed/ay2e0VXtmfI?si=E1Q3STkmqj2t6hPs"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div>
+            <h3 className="font-medium text-lg mt-2">Thaddeus Montgomery</h3>
+            <p className="capitalize text-center text-gray-700 text-sm pb-2">
+              Owner, GoldGarden
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
