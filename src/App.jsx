@@ -41,7 +41,7 @@ function App() {
         <Contact/>
         <Footer />
       </div>
-        {/* <StickyAd/> */}
+        <StickyAd/>
    
     </>
   )
