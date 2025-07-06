@@ -1,94 +1,175 @@
-const Answers = () => {
-  const faqData = [
-    {
-      question: "What services do you offer?",
-      answer:
-        "We offer a comprehensive range of digital services including web design, web development, mobile app development, digital marketing, SEO optimization, branding, and UI/UX design to help your business grow online.",
-    },
-    {
-      question: "How long does it take to design a website?",
-      answer:
-        "The timeline for website design typically ranges from 2-8 weeks depending on the complexity, features required, and client feedback cycles. Simple websites can be completed in 2-3 weeks, while complex e-commerce or custom applications may take 6-8 weeks.",
-    },
-    {
-      question: "Do you work with small businesses or just big brands?",
-      answer:
-        "We work with businesses of all sizes! From startups and small local businesses to large enterprises. We believe every business deserves professional digital presence and we tailor our services to fit different budgets and requirements.",
-    },
-    {
-      question: "Can I customize the packages you offer?",
-      answer:
-        "While we have standard packages, we understand that every business has unique needs. We're happy to customize our services and create bespoke solutions that align with your specific goals and budget.",
-    },
-    {
-      question: "How do you measure the success of a marketing campaign?",
-      answer:
-        "We use various metrics including website traffic, conversion rates, lead generation, social media engagement, ROI, and specific KPIs relevant to your business goals. We provide detailed monthly reports with actionable insights.",
-    },
-    {
-      question: "What if I don't like the designs or strategies?",
-      answer:
-        "Your satisfaction is our priority. We offer multiple revision rounds and work closely with you throughout the process. If you're not happy with the initial concepts, we'll revise them until we achieve a design that meets your vision and goals.",
-    },
-    {
-      question: "How do I get started?",
-      answer:
-        "Getting started is easy! Simply contact us through our website, phone, or email. We'll schedule a free consultation to discuss your needs, goals, and budget. Then we'll provide a detailed proposal and timeline for your project.",
-    },
-    {
-      question:
-        "Do you provide support after launching my website or campaign?",
-      answer:
-        "Yes! We offer ongoing support and maintenance packages. This includes regular updates, security monitoring, backup services, technical support, and performance optimization to ensure your digital assets continue to perform at their best.",
-    },
-    {
-      question: "What makes your agency different from the rest?",
-      answer:
-        "Our unique approach combines creativity with data-driven strategies. We focus on building long-term partnerships, provide transparent communication, offer competitive pricing, and deliver measurable results. Our team stays updated with the latest trends and technologies.",
-    },
-  ];
+import React, { useState, useRef, useEffect } from "react";
+import { FaPlus, FaRegStar, FaTimes } from "react-icons/fa";
 
+const faqData = [
+  {
+    id: 1,
+    question: "What services do you offer?",
+    answer:
+      "We're a one-stop-shop for all things digital! From crafting stunning websites to skyrocketing your SEO rankings, managing your social media, and building unforgettable brands, we do it all. Oh, and we promise we don't bite.",
+  },
+  {
+    id: 2,
+    question: "How long does it take to design a website?",
+    answer:
+      "Think of us as your digital chefs—we cook up greatness without rushing the recipe. Typically, it takes 4–6 weeks, depending on your needs. But don’t worry, we keep you in the loop every step of the way!",
+  },
+  {
+    id: 3,
+    question: "Do you work with small businesses or just big brands?",
+    answer:
+      "Size doesn’t matter! Whether you’re a budding startup or an industry giant, we’re here to make your vision a reality. Big dreams? Small budget? Let’s chat!",
+  },
+  {
+    id: 4,
+    question: "Can I customize the packages you offer?",
+    answer:
+      "Absolutely! Think of our packages as a base pizza—you can add or swap toppings (services) to create your perfect slice of digital success.",
+  },
+  {
+    id: 5,
+    question: "How do you measure the success of a marketing campaign?",
+    answer:
+      "Numbers don’t lie, and neither do we! We track everything from website traffic to social media engagement and conversions. You'll get regular reports, so you’re always in the know.",
+  },
+  {
+    id: 6,
+    question: "What if I don't like the designs or strategies?",
+    answer:
+      "Honesty hour—we want you to love what we create. If you’re not thrilled, we’ll go back to the drawing board and tweak until it’s perfect. Your happiness is our success.",
+  },
+  {
+    id: 7,
+    question: "How do I get started?",
+    answer:
+      "It’s easy! Just click that shiny 'Contact Us' button, shoot us a message, or give us a call. We’ll grab coffee (virtually or in-person) and start brainstorming magic together.",
+  },
+  {
+    id: 8,
+    question: "Do you provide support after launching my website or campaign?",
+    answer:
+      "Of course! We don’t just wave goodbye after launch. We offer website maintenance, performance tracking, and ongoing support to ensure your success continues.",
+  },
+  {
+    id: 9,
+    question: "What makes your agency different from the rest?",
+    answer:
+      "We’re not just a team—we’re your partners in success. We combine creativity, strategy, and a sprinkle of fun to make your brand unforgettable. Plus, we love building relationships that last.",
+  },
+];
+
+const FAQItem = ({ question, answer, isOpen, onClick }) => {
+  const contentRef = useRef(null);
+  const [contentHeight, setContentHeight] = useState("0px");
+
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      // padding-top: 16px (1rem), padding-bottom: 16px (1rem) = 32px
+      const extraPadding = 32;
+      const actualHeight = contentRef.current.scrollHeight + extraPadding;
+      setContentHeight(`${actualHeight}px`);
+    } else {
+      setContentHeight("0px");
+    }
+  }, [isOpen]);
+  
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white">
-      {/* Header Section */}
-      <div className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-            <span className="text-white text-sm font-bold">?</span>
-          </div>
-          <span className="text-sm text-gray-600 font-medium">
-            Frequently Asked Questions
-          </span>
-        </div>
+    <div
+      className={`
+        bg-gray-100 rounded-xl shadow-md transition-all duration-300 ease-in-out
+        ${isOpen ? "relative z-10" : "z-0"}
+      `}
+    >
+      <button
+        className={`
+          group cursor-pointer w-full flex justify-between items-center p-6 text-left font-semibold text-gray-800 focus:outline-none
+          ${isOpen ? "bg-white rounded-2xl" : "rounded-xl "}
+        `}
+        onClick={onClick}
+      >
+        <span className="break-words">{question}</span>
+        <span
+          className={`
+            p-2 rounded-xl transition-colors duration-300
+            group-hover:bg-orange-400 text-gray-800
+          `}
+        >
+          {isOpen ? (
+            <FaTimes className="text-lg" />
+          ) : (
+            <FaPlus className="text-lg" />
+          )}
+        </span>
+      </button>
 
-        <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
-          FAQ It Up! Your curiosity meets our expertise—let's clear things up!
-        </h2>
-
-        <p className="text-gray-600 max-w-md">
-          We've gathered all the important info right here. Explore our FAQs and
-          find the answers you need.
+      <div
+        ref={contentRef}
+        style={{ maxHeight: contentHeight }}
+        className={`
+    overflow-hidden transition-all duration-300 ease-in-out
+    ${
+      isOpen
+        ? "border-t border-dashed border-gray-400 px-6 md:px-8 py-4 mt-8"
+        : "px-6 md:px-8"
+    }
+  `}
+      >
+        <p className="text-gray-600 text-base md:text-lg leading-relaxed break-words">
+          {answer}
         </p>
       </div>
-
-      {/* FAQ Items */}
-      <div className="space-y-4">
-        {faqData.map((faq, index) => (
-          <div
-            key={index}
-            className="collapse collapse-plus bg-gray-50 rounded-lg"
-          >
-            <input type="radio" name="faq-accordion" />
-            <div className="collapse-title text-lg font-medium text-gray-900 pr-8">
-              {faq.question}
-            </div>
-            <div className="collapse-content">
-              <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
+  );
+};
+
+const Answers = () => {
+  const [openFAQId, setOpenFAQId] = useState([]);
+
+  const handleFAQClick = (id) => {
+    setOpenFAQId((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+    );
+  };
+
+  return (
+    <section className="py-16 ">
+      <div className="container mx-auto px-4 md:px-10 flex flex-col lg:flex-row gap-12">
+        {/* Left Side */}
+        {/* Left Side */}
+        <div className="lg:w-1/2 w-full lg:sticky lg:top-28 self-start">
+          <div className="bg-gray-100 w-fit pr-2 rounded-2xl flex items-center gap-2 mb-4">
+             <div className="bg-black p-[10px] rounded-full text-white">
+                                 <FaRegStar className="text-sm" />
+                               </div>
+            <h4 className="text-sm font-medium">
+              Frequently Asked Questions
+            </h4>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            FAQ It Up! Your curiosity meets our expertise—
+            <br />
+            let’s clear things up!
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We’ve gathered all the important info right here. Explore our FAQs
+            and find the answers you need.
+          </p>
+        </div>
+
+        {/* Right Side */}
+        <div className="lg:w-1/2 w-full space-y-4">
+          {faqData.map((faq) => (
+            <FAQItem
+              key={faq.id}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openFAQId.includes(faq.id)}
+              onClick={() => handleFAQClick(faq.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
