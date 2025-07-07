@@ -14,6 +14,7 @@ import {
   FaMobileAlt,
   FaBoxOpen,
 } from "react-icons/fa";
+import HeadingMotionLine from "./HeadingMotionLine";
 
 // ⬇️ Map tags to icons
 const iconMap = {
@@ -55,7 +56,13 @@ const ServiceCard = ({ service }) => {
 
   return (
     <div className="rounded-4xl  bg-[#eff1f6a4] scroll-mt-20 px-4 py-4">
-      <h3 className="text-2xl md:text-3xl font-bold mb-4 pt-2 px-4">{service.title}</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-4 pt-2 px-4">
+      <HeadingMotionLine>
+
+          {service.title}
+
+      </HeadingMotionLine>
+        </h3>
       <p className="text-gray-800 mb-8 leading-relaxed px-4">
         {service.description}
       </p>

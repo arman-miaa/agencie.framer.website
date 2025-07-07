@@ -1,12 +1,11 @@
 import { BsTwitterX } from "react-icons/bs";
-import img1 from "../assets/aboutImg1.avif"
-import img2 from "../assets/aboutImg2.avif"
-import img3 from "../assets/aboutImg3.avif"
+import img1 from "../assets/aboutImg1.avif";
+import img2 from "../assets/aboutImg2.avif";
+import img3 from "../assets/aboutImg3.avif";
 import { Wand2, Brain, Cpu } from "lucide-react";
 import { BiLogoLinkedinSquare } from "react-icons/bi";
 import { FaRegStar } from "react-icons/fa";
-
-
+import FadeUpOnScroll from "../shared/FadeUpOnScroll";
 
 const About = () => {
   const teamMembers = [
@@ -48,38 +47,42 @@ const About = () => {
   return (
     <div className="max-w-7xl md:mx-auto mt-28 md:mt-58 bg-white mx-4 px-4 xl:px-0">
       {/* Header Section */}
-      <div className="mb-12 ">
-        <div className="bg-gray-200 w-fit  pr-3 rounded-2xl flex items-center gap-2 mb-6">
-          <div className="bg-black p-[10px] rounded-full text-white">
-            <FaRegStar className="text-sm" />
+      <FadeUpOnScroll delay={0.2}>
+        <div className="mb-12 ">
+          <div className="bg-gray-200 w-fit  pr-3 rounded-2xl flex items-center gap-2 mb-6">
+            <div className="bg-black p-[10px] rounded-full text-white">
+              <FaRegStar className="text-sm" />
+            </div>
+            <h4 className="text-sm font-medium">About Us</h4>
           </div>
-          <h4 className="text-sm font-medium">About Us</h4>
-        </div>
 
-        <div className="max-w-3xl ">
-          <p className="text-gray-700 text-lg md:text-2xl leading-8 mb-6">
-            We started as a small group of passionate creators who believed that
-            great ideas deserve bold execution. What began over coffee-fueled
-            brainstorming sessions has grown into a thriving digital agency
-            dedicated to{" "}
-            <span className="font-semibold">helping brands stand out.</span>
-          </p>
+          <div className="max-w-3xl ">
+            <p className="text-gray-700 text-lg md:text-2xl leading-8 mb-6">
+              We started as a small group of passionate creators who believed
+              that great ideas deserve bold execution. What began over
+              coffee-fueled brainstorming sessions has grown into a thriving
+              digital agency dedicated to{" "}
+              <span className="font-semibold">helping brands stand out.</span>
+            </p>
 
-          <p className="text-gray-700 text-lg md:text-2xl leading-8">
-            Our mission is simple:{" "}
-            <span className="font-semibold">
-              to craft creative, impactful solutions that drive results.
-            </span>
-            With a vision{" "}
-            <span className="font-semibold">
-              to empower businesses to shine in a crowded world
-            </span>
-            , we combine strategy, design, and a touch of magic{" "}
-            <span className="font-semibold">to bring your ideas to life.</span>
-            Let's make something amazing together!
-          </p>
+            <p className="text-gray-700 text-lg md:text-2xl leading-8">
+              Our mission is simple:{" "}
+              <span className="font-semibold">
+                to craft creative, impactful solutions that drive results.
+              </span>
+              With a vision{" "}
+              <span className="font-semibold">
+                to empower businesses to shine in a crowded world
+              </span>
+              , we combine strategy, design, and a touch of magic{" "}
+              <span className="font-semibold">
+                to bring your ideas to life.
+              </span>
+              Let's make something amazing together!
+            </p>
+          </div>
         </div>
-      </div>
+      </FadeUpOnScroll>
 
       {/* Team Section */}
       <div className=" grid grid-cols-1 lg:grid-cols-4 gap-4 mt-16">

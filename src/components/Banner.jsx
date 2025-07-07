@@ -1,11 +1,15 @@
 import { FaStar } from "react-icons/fa";
 import Button1 from "../shared/Button1";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
+import HeadingMotionLine from "../shared/HeadingMotionLine";
 
 
 const Banner = () => {
   return (
     <div className="max-w-7xl mx-auto mt-12 px-10 flex flex-col items-center md:items-start text-center md:text-left ">
+  
+    
+
       <h1 className="text-4xl md:text-5xl lg:text-[65px]   font-medium lg:leading-16 ">
         Big ideas, smart strategies,
         <span className="hidden md:inline">

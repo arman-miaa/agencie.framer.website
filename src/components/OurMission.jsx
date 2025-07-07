@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import HeadingMotionLine from "../shared/HeadingMotionLine";
 
 // Counter Component
 const Counter = ({ target, suffix }) => {
@@ -36,13 +37,25 @@ const OurMission = () => {
   return (
     <section className="max-w-7xl px-8 mx-auto mt-12 lg:mt-[150px]  py-16 text-center">
       {/* Title */}
-      <h2 className="text-4xl lg:text-[52px]  font-semibold lg:leading-14 mb-12">
-        <span className="text-orange-600">Building</span> brands,{" "}
-        <span className="text-orange-600">boosting</span> businesses,
-        <br />
-        and <span className="text-orange-600">redefining</span> possibilities.
-        Let’s <br />
-        grow your brand together.
+      <h2 className="text-4xl lg:text-[62px] font-semibold lg:leading-14 mb-12 text-center space-y-2">
+        <div>
+          <HeadingMotionLine index={0}>
+            <span className="text-orange-600">Building</span> brands,{" "}
+            <span className="text-orange-600">boosting</span> businesses,
+          </HeadingMotionLine>
+        </div>
+        <div>
+          <HeadingMotionLine index={1}>
+            and <span className="text-orange-600">redefining</span>{" "}
+            possibilities. Let’s
+          </HeadingMotionLine>
+        </div>
+        <div>
+          <HeadingMotionLine index={2}>
+            grow your brand together.
+          </HeadingMotionLine>
+        
+        </div>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
