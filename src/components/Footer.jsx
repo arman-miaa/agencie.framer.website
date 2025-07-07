@@ -2,7 +2,7 @@
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi"; 
 const Footer = () => {
   return (
-    <div className="p-8">
+    <div className="p-8 mt-40 md:mt-0">
       <footer className="bg-black text-white py-16 px-4 md:px-20 rounded-3xl">
    
         <div className="max-w-7xl mx-auto">
@@ -10,10 +10,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             {/* Company Info */}
             <div className="mb-8 md:mb-0 md:w-1/2 text-center w-full md:text-left">
-              <h2 className="text-5xl md:text-[106px] font-extrabold text-orange-500 mb-4">
+              <h2 className="text-5xl lg:text-[106px] font-extrabold text-orange-500 mb-4">
                 Agencie.co
               </h2>
-              <p className="text-xl  leading-relaxed max-w-md">
+              <p className="text-xl text-center md:text-left  leading-relaxed max-w-md">
                 The next big thing starts here— <br /> drop us a line and let’s
                 get creating!
               </p>
@@ -64,7 +64,7 @@ const Footer = () => {
           <hr className="border-gray-700 mb-12" />
 
           {/* Bottom Section: Contact Info & Opening Hours */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 px-2">
             {/* Phone */}
             <div className="flex items-start text-left">
               <FiPhone className="text-orange-500 text-xl mr-3 -mt-[2px] " />
@@ -127,7 +127,7 @@ const Footer = () => {
           <hr className="border-gray-700 mb-12" />
 
           {/* Copyright Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center    border-t border-gray-800">
+          <div className="flex  justify-between items-center px-2   border-gray-800">
         
             <p className="mb-2 md:mb-0">©Template by RealMehedi</p>
             <p>Built in Framer</p>

@@ -12,7 +12,7 @@ const TitleSection = ({badgeText,title}) => {
           </div>
           <h4 className="text-sm font-medium">{badgeText}</h4>
         </div>
-        <h2 className="text-3xl md:text-[54px] font-semibold text-gray-900 leading-13 mt-2 w-7/12 mx-auto">
+        <h2 className="text-3xl md:text-[54px] font-semibold text-gray-900 md:leading-13 mt-2 lg:w-7/12 mx-auto">
           {title}
         </h2>
       </div>

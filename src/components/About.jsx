@@ -46,9 +46,9 @@ const About = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto  mt-58 bg-white">
+    <div className="max-w-7xl md:mx-auto mt-28 md:mt-58 bg-white mx-4 px-4 xl:px-0">
       {/* Header Section */}
-      <div className="mb-12">
+      <div className="mb-12 ">
         <div className="bg-gray-200 w-fit  pr-3 rounded-2xl flex items-center gap-2 mb-6">
           <div className="bg-black p-[10px] rounded-full text-white">
             <FaRegStar className="text-sm" />

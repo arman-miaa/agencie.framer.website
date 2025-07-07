@@ -132,20 +132,21 @@ const Answers = () => {
   };
 
   return (
-    <section className=" max-w-7xl mx-auto mt-52 ">
+    <section className=" max-w-7xl mx-auto mt-28 md:mt-52 px-4 2xl:px-0">
       <div className="  flex flex-col lg:flex-row gap-12">
         {/* Left Side */}
-        {/* Left Side */}
-        <div className="lg:w-1/2 w-full lg:sticky lg:top-28 self-start">
-          <div className="bg-[#eff1f6aa] w-fit pr-2 rounded-2xl flex items-center gap-2 mb-4">
+        <div className="lg:w-1/2 w-fit lg:sticky lg:top-28   text-center lg:text-left lg:self-start">
+          <div className="bg-[#eff1f6aa] mx-auto lg:mx-0 w-fit justify-center lg:justify-start  pr-2 rounded-2xl flex items-center gap-2 mb-4">
             <div className="bg-black p-[10px] rounded-full text-white">
               <FaRegStar className="text-sm" />
             </div>
             <h4 className="text-sm font-medium">Frequently Asked Questions</h4>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight lg:mb-6">
             FAQ It Up! Your curiosity meets our expertise—
-            <br />
+            <span className="hidden 2xl:flex">
+              <br />
+            </span>
             let’s clear things up!
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">

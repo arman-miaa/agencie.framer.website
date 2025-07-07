@@ -49,7 +49,10 @@ const ServicesSection = ({
   };
 
   return (
-    <div id="services" className="container mx-auto px-4 md:px-40 pt-40 border-4">
+    <div
+      id="services"
+      className="container mx-auto px-4 xl:px-20 2xl:px-40 pt-20 md:pt-40 "
+    >
       {/* Header */}
       <div className="text-center md:mb-12">
         <div className="bg-[#eff1f6a4] flex items-center w-fit mx-auto pr-4 gap-2 rounded-full ">
@@ -62,27 +65,26 @@ const ServicesSection = ({
           {title}
         </h2>
       </div>
-      
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-12 md:mt-16 ">
-        {/* Sidebar */}
-        <div className="lg:col-span-1 hidden md:flex">
-          <div className="sticky top-24 ">
+      <div className="flex flex-col md:flex-row  mt-12 md:mt-16">
+        {/* Sidebar: Hidden on small devices */}
+        <div className="hidden md:block md:w-2/3 xl:w-1/4">
+          <div className="sticky top-24">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`relative cursor-pointer px-3  py-[2px]  rounded-lg transition-all duration-300 ${
-                  activeService === index ? " ml-6" : ""
+                className={`relative cursor-pointer px-3 py-[2px] rounded-lg transition-all duration-300 ${
+                  activeService === index ? "ml-3" : ""
                 }`}
                 onClick={() => scrollToService(index)}
               >
                 {activeService === index && (
-                  <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 ">
+                  <div className="absolute -left-2 top-1/2 transform -translate-y-1/2">
                     <RiArrowRightSFill className="text-2xl text-main" />
                   </div>
                 )}
                 <h3
-                  className={` ${
+                  className={`${
                     activeService === index
                       ? "text-black font-semibold ml-1"
                       : "text-gray-800 text-[17px]"
@@ -96,7 +98,7 @@ const ServicesSection = ({
         </div>
 
         {/* Main Cards */}
-        <div className="lg:col-span-3 space-y-8 md:ml-16">
+        <div className="w-full md:w-2/3 xl:w-3/4 space-y-8">
           {services.map((service, index) => (
             <div key={index} ref={(el) => (serviceRefs.current[index] = el)}>
               <ServiceCard
@@ -108,6 +110,7 @@ const ServicesSection = ({
           ))}
         </div>
       </div>
+
       <MarqueeSection />
     </div>
   );

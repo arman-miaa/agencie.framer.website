@@ -58,7 +58,7 @@ const PortfolioSection = () => {
   return (
     <div
       id="project"
-      className="scroll-mt-36 mt-[110px] max-w-7xl mx-auto px-4"
+      className="scroll-mt-36 mt-14 md:mt-[110px] max-w-7xl mx-auto px-4"
     >
       <TitleSection
         badgeText="Our Portfolio"

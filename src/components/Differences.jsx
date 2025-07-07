@@ -50,7 +50,7 @@ const agentGItems = [
 
 const Differences = () => {
   return (
-    <div className="mt-52 max-w-7xl mx-auto px-4">
+    <div className="mt-20 md:mt-52 max-w-7xl mx-auto px-4">
       <TitleSection
         badgeText="Our differences"
         title="While others copy and paste, we innovate and elevate. Your brand gets the VIP treatment it truly deserves."
@@ -59,10 +59,10 @@ const Differences = () => {
       <div className="grid md:grid-cols-2 max-w-3xl mx-auto">
         {/* Others Column */}
         <div className="">
-          <h3 className="text-2xl font-bold text-gray-700 text-center mb-4">
+          <h3 className="text-2xl font-bold text-gray-700 text-center mb-4 -mt-8 md:-mt-0">
             Others
           </h3>
-          <div className="bg-[#eff1f6bc] rounded-l-3xl">
+          <div className="bg-[#eff1f6bc] rounded-3xl md:rounded-r-3xl">
             {othersItems.map((item, index) => (
               <div
                 key={index}
@@ -79,10 +79,10 @@ const Differences = () => {
 
         {/* Agent-G Column */}
         <div className="">
-          <h3 className="text-2xl font-bold text-center mb-4">
+          <h3 className="text-2xl font-bold text-center mb-4 mt-8 md:mt-0">
             <span className="text-orange-500">🤖</span> Agent-G
           </h3>
-          <div className="bg-gray-900 rounded-r-3xl ">
+          <div className="bg-gray-900 rounded-3xl md:rounded-r-3xl ">
             {agentGItems.map((item, index) => (
               <div
                 key={index}

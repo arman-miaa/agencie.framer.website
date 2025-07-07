@@ -81,7 +81,7 @@ const Testimonials = () => {
   return (
     <div
       id="reviews"
-      className=" scroll-mt-36 max-w-7xl mx-auto mt-46 p-6 bg-white"
+      className=" scroll-mt-36 max-w-7xl mx-auto mt-20 md:mt-46 p-6 bg-white"
     >
       {/* Header Section */}
       <div className="text-center mb-12">
@@ -143,7 +143,7 @@ const Testimonials = () => {
             </div>
 
             {/* Client Info Below */}
-            <div className="flex flex-col mt-6 w-full mb-4">
+            <div className="flex flex-col mt-6 w-full mb-4 ml-2 md:ml-0">
               <div className="flex items-center gap-2">
                 <img
                   src={testimonial.image || "/placeholder.svg"}

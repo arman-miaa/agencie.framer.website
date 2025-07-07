@@ -84,7 +84,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div id="pricing" className="mt-52 scroll-mt-36 max-w-7xl mx-auto  ">
+    <div id="pricing" className="mt-20 md:mt-52 scroll-mt-36 max-w-7xl mx-auto  ">
       <TitleSection
         badgeText="Pricing Plans"
         title="Affordable, transparent pricing tailored to your business—because every detail matters!"
