@@ -49,23 +49,24 @@ const ServicesSection = ({
   };
 
   return (
-    <div id="services" className="container mx-auto px-4 md:px-40 pt-40">
+    <div id="services" className="container mx-auto px-4 md:px-40 pt-40 border-4">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-center md:mb-12">
         <div className="bg-[#eff1f6a4] flex items-center w-fit mx-auto pr-4 gap-2 rounded-full ">
           <div className="bg-black p-[10px] rounded-full text-white">
             <FaRegStar className="text-sm" />
           </div>
           <h4 className="text-sm font-medium">{badgeText}</h4>
         </div>
-        <h2 className="text-3xl md:text-[52px] font-semibold text-gray-900 leading-13 w-5/9 mx-auto mt-2">
+        <h2 className="text-3xl md:text-[52px] font-semibold text-gray-900 leading-13 lg:w-5/9 mx-auto mt-2">
           {title}
         </h2>
       </div>
+      
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-16 ">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-12 md:mt-16 ">
         {/* Sidebar */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 hidden md:flex">
           <div className="sticky top-24 ">
             {services.map((service, index) => (
               <div
@@ -95,7 +96,7 @@ const ServicesSection = ({
         </div>
 
         {/* Main Cards */}
-        <div className="lg:col-span-3 space-y-8 ml-16">
+        <div className="lg:col-span-3 space-y-8 md:ml-16">
           {services.map((service, index) => (
             <div key={index} ref={(el) => (serviceRefs.current[index] = el)}>
               <ServiceCard

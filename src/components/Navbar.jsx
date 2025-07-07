@@ -1,8 +1,11 @@
-import logo from "../assets/logo.png"
+import { useState } from "react";
+import logo from "../assets/logo.png";
 import Button1 from "../shared/Button1";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { HiX } from "react-icons/hi";
 
 const Navbar = () => {
-
+  const [isOpen, setIsOpen] = useState(false);
   const links = (
     <>
       <li>
@@ -47,59 +50,58 @@ const Navbar = () => {
       </li>
     </>
   );
-  
-  
 
   return (
     <>
-      <div className="navbar sticky top-0 z-30 left-0 bg-white   px-10 mx-auto">
+      <div className="navbar sticky top-0 z-30 left-0 bg-white px-6 lg:px-10 mx-auto">
+        {/* Left: Logo */}
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content font-medium bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              {links}
-            </ul>
-          </div>
-          {/* logo */}
-          <div>
-            <img
-              src={logo}
-              alt="logo-img"
-              className="w-25 object-cover cursor-pointer"
-            />
-          </div>
+          <img
+            src={logo}
+            alt="logo-img"
+            className="w-24 object-cover cursor-pointer"
+          />
         </div>
+
+        {/* Center: Links for large screens */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1  font-medium text-[15px] ">{links}</ul>
+          <ul className="menu menu-horizontal px-1 font-medium text-[15px]">
+            {links}
+          </ul>
         </div>
-        <div className="navbar-end">
+
+        {/* Right: Button for large screens */}
+        <div className="navbar-end hidden lg:flex">
           <Button1
             text="Get Template"
             link="https://www.framer.com/marketplace/templates/agenium/?via=realmehedi1"
           />
         </div>
+
+        {/* Right: Hamburger for small screens */}
+        <div className="navbar-end lg:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="btn  text-2xl text-main bg-black"
+          >
+            {isOpen ? <HiX /> : <RxHamburgerMenu />}
+          </button>
+
+          {isOpen && (
+            <ul className="absolute right-4 top-16 pb-20 bg-white shadow-lg rounded-lg p-4 w-full text-center font-medium space-y-10 z-50 transition-all duration-300 ease-in-out ">
+              {links}
+              <li>
+                <Button1
+                  text="Get Template"
+                  link="https://www.framer.com/marketplace/templates/agenium/?via=realmehedi1"
+                />
+              </li>
+            </ul>
+          )}
+        </div>
       </div>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

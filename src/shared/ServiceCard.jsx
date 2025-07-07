@@ -54,7 +54,7 @@ const ServiceCard = ({ service }) => {
   };
 
   return (
-    <div className="rounded-4xl bg-[#eff1f6a4] scroll-mt-20 px-4 py-4">
+    <div className="rounded-4xl border-4 bg-[#eff1f6a4] scroll-mt-20 px-4 py-4">
       <h3 className="text-2xl md:text-3xl font-bold mb-4 pt-2 px-4">{service.title}</h3>
       <p className="text-gray-800 mb-8 leading-relaxed px-4">
         {service.description}

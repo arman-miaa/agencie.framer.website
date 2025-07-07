@@ -37,10 +37,10 @@ const Section = () => {
   };
 
   return (
-    <section className="relative max-w-[1820px] mx-auto pt-16 flex flex-col lg:flex-row gap-4 transition-all duration-500">
+    <section className="relative max-w-[1820px] mx-auto px-8 2xl:px-0 pt-16 flex flex-col lg:flex-row gap-4 transition-all duration-500">
       {/* Left Box */}
       <div
-        className={`relative rounded-3xl overflow-hidden flex-1 transition-all duration-700 ${
+        className={`relative hidden lg:flex rounded-3xl overflow-hidden flex-1 transition-all duration-700 ${
           isVideoPinned
             ? "opacity-0 -translate-x-10 pointer-events-none"
             : "lg:w-1/3 opacity-100 translate-x-0"
@@ -62,7 +62,7 @@ const Section = () => {
       {/* Middle Video */}
       <div
         ref={videoRef}
-        className={`relative rounded-4xl overflow-hidden h-[75vh] transition-all duration-700 ${
+        className={`relative rounded-[60px] md:rounded-3xl px-6 lg:px-0  overflow-hidden h-[75vh] transition-all duration-700 ${
           isVideoPinned ? "w-full h-[85vh]" : "lg:w-1/3"
         }`}
         onClick={() => setShowModal(true)}
@@ -97,7 +97,7 @@ const Section = () => {
 
       {/* Right Box */}
       <div
-        className={`rounded-3xl overflow-hidden flex-1 transition-all duration-700 ${
+        className={`rounded-3xl hidden lg:flex overflow-hidden flex-1 transition-all duration-700 ${
           isVideoPinned
             ? "opacity-0 translate-x-10 pointer-events-none"
             : "lg:w-1/3 opacity-100 translate-x-0"

@@ -5,21 +5,21 @@ import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const Banner = () => {
   return (
-    <div className="max-w-7xl mx-auto mt-12 px-10 flex flex-col items-center lg:items-start text-center lg:text-left ">
-      <h1 className="text-3xl md:text-[65px]   font-medium leading-16 ">
+    <div className="max-w-7xl mx-auto mt-12 px-10 flex flex-col items-center md:items-start text-center md:text-left ">
+      <h1 className="text-4xl md:text-5xl lg:text-[65px]   font-medium lg:leading-16 ">
         Big ideas, smart strategies,
-        <span className="hidden lg:inline">
+        <span className="hidden md:inline">
           <br />
         </span>
         and endless creativity to
-        <span className="hidden lg:inline">
+        <span className="hidden md:inline">
           <br />
         </span>
         supercharge⚡your brand!
       </h1>
       <p className="text-xl font-medium text-[#0f0f0f96] py-6 pt-7 ">
         Your go-to agency for designs that inspire and strategies{" "}
-        <span className="hidden lg:inline">
+        <span className="hidden md:inline">
           <br />
         </span>
         that deliver. We turn ideas into lasting impressions.
