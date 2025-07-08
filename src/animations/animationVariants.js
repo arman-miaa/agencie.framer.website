@@ -1,17 +1,17 @@
 export const fadeUpLine = {
-  hidden: { opacity: 0, y: 30 }, // নিচ থেকে একটু নিচে শুরু করবে
+  hidden: { opacity: 0, y: 30 }, 
   visible: (i = 0) => ({
     opacity: 1,
-    y: 0, // আসল জায়গায় উপরে উঠবে
+    y: 0, 
     transition: {
-      delay: i * 0.2, // index অনুযায়ী ধাপে ধাপে আসবে
+      delay: i * 0.2, 
       duration: 0.6,
       ease: "easeOut",
     },
   }),
 };
 
-// animation.js
+
 // animation.js
 export const slideUpFadeIn = {
     hidden: { opacity: 0, y: 60 },
@@ -43,7 +43,7 @@ export const fadeIn = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1.4, // ধীরে fade-in হবে
+      duration: 1.4, 
       ease: "easeOut",
     },
   },

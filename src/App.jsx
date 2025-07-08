@@ -36,7 +36,7 @@ function App() {
         <PricingSection />
         <About />
         {/* animation */}
-        <FadeUpOnScroll  delay={2.0}>
+        <FadeUpOnScroll  delay={0.2}>
           <Answers />
         </FadeUpOnScroll>
         <Contact />

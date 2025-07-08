@@ -16,8 +16,8 @@ import logo2 from "../assets/logo1.svg";
 import logo4 from "../assets/logo7.svg";
 import logo6 from "../assets/logoImg.svg";
 import FadeUpOnScroll from "../shared/FadeUpOnScroll";
-
 const Testimonials = () => {
+
   const testimonials = [
     {
       quote:
@@ -125,10 +125,11 @@ const Testimonials = () => {
       </FadeUpOnScroll>
 
       {/* Testimonials Grid */}
-      <FadeUpOnScroll delay={0.2}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="flex flex-col items-start">
+      <FadeUpOnScroll key={index} delay={0.2}>
+
+            <div  className="flex flex-col items-start">
               {/* Quote Box */}
               <div className="bg-[#eff1f6a4] rounded-3xl p-6 pb-10 h-full w-full relative">
                 {/* Big Quote Mark on Left */}
@@ -171,9 +172,10 @@ const Testimonials = () => {
                 </p>
               </div>
             </div>
+
+      </FadeUpOnScroll>
           ))}
         </div>
-      </FadeUpOnScroll>
 
       {/* Video Testimonials */}
       <FadeUpOnScroll delay={0.2}>
